@@ -1,0 +1,21 @@
+---
+import ContentSection from "./content-section.astro";
+---
+
+<ContentSection title="Contact Us" id="contact">
+  <Fragment slot="lead">
+    Book a meeting <u>today</u> and get a quotation <u>faster</u> than anywhere else.
+  </Fragment>
+  <div class="flex flex-col items-center justify-center gap-2">
+    <a
+      class="flex items-center justify-center text-sm"
+      href="tel:00923174726985"><b>Call +92 317 4726985</b></a
+    >
+
+    <div class="w-1/2">
+      <a href="https://wa.me/923174726985">
+        <img src="public/whatsapp-green.png" alt="Chat on WhatsApp" />
+      </a>
+    </div>
+  </div>
+</ContentSection>
