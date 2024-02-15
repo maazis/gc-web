@@ -9,7 +9,8 @@ import Services from "~/components/services.astro";
 import Contact from "~/components/contact.astro";
 
 const { generator, site } = Astro;
-const image = new URL("social.jpg", site);
+const image = new URL("../assets/social.png", site); // image won't work bc it needs a public url?
+const title = "brown software";
 const description =
   "Quality, powerful web and mobile solutions. Contact to get quotations.";
 ---
@@ -22,16 +23,15 @@ const description =
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
 
-    <title>brown software</title>
+    <title>{title}</title>
     <meta name="description" content={description} />
 
-    <!-- social media -->
-    <meta property="og:title" content="Astro" />
+    <!-- open graph preview -->
+    <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
     <meta property="og:url" content={site} />
-    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- initialize theme -->
     <script is:inline>
@@ -56,8 +56,7 @@ const description =
           }
         });
     </script>
-  </head>
-  <body
+  </head><body
     class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
   >
     <Header />
