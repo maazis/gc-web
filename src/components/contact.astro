@@ -1,5 +1,6 @@
 ---
 import ContentSection from "./content-section.astro";
+import whatsappImage from "../assets/whatsapp-green.png";
 ---
 
 <ContentSection title="Contact Us" id="contact">
@@ -14,7 +15,7 @@ import ContentSection from "./content-section.astro";
 
     <div class="w-1/2">
       <a href="https://wa.me/923174726985">
-        <img src="public/whatsapp-green.png" alt="Chat on WhatsApp" />
+        <img src={whatsappImage.src} alt="Chat on WhatsApp" />
       </a>
     </div>
   </div>
